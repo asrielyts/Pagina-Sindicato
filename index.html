@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Sindical</title>
+</head>
+<body>
+
+    <form id="formLogin">
+
+        <div>
+            <label for="correo">Correo electrónico</label>
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="contrasena">Contraseña</label>
+            <input
+                type="password"
+                id="contrasena"
+                name="contrasena"
+                required
+            >
+        </div>
+
+        <button type="submit">
+            Iniciar sesión
+        </button>
+
+        <button type="button" id="btnActivar">
+            Activar mi cuenta
+        </button>
+
+        <button type="button" id="btnRecuperar">
+            ¿Olvidaste tu contraseña?
+        </button>
+
+    </form>
+
+    <section id="seccionActivar" hidden>
+        <h2>ACTIVACION DE CUENTA</h2>
+
+        <form id="formularioActivacion">
+            <div>
+                <label for="correoActivacion">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correoActivacion"
+                    name="correoActivacion"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="codigoActivacion">Codigo de activacion</label>
+                <input 
+                type="text" 
+                name="codigoActivacion" 
+                id="codigoActivacion"
+                required
+                >
+            </div>
+
+            <div>
+                <label for="nuevaContrasena">Ingresa la nueva contraseña</label>
+                <input
+                    type="password"
+                    id="nuevaContrasena"
+                    name="nuevaContrasena"
+                    minlength="8"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="confNuevaContrasena">Confirma la nueva contraseña</label>
+                <input
+                    type="password"
+                    id="confNuevaContrasena"
+                    name="confNuevaContrasena"
+                    minlength="8"
+                    required
+                >
+            </div>
+
+            <p id="mensajeActivacion" role="status"></p>
+
+            <button type="submit">
+                Activar cuenta
+            </button>
+                    
+            <button type="button" id="volverActivar">
+                Volver
+            </button>
+        </form>
+    </section>
+
+    <section id="seccionRecuperar" hidden>
+
+        <h2>Recuperar contraseña</h2>
+
+        <p>
+            Tu solicitud debe ser aprobada
+            por un administrador.
+        </p>
+
+        <button type="button" id="volverRecuperar">
+            Volver
+        </button>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
