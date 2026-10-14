@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión Sindical</title>
+    <title>Sindicato Carls Jr</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <main class="contenedor">
     <form id="formLogin">
 
         <div>
@@ -30,17 +31,16 @@
             >
         </div>
 
-        <button type="submit">
+        <button type="submit" class="boton-principal">
             Iniciar sesión
         </button>
 
-        <button type="button" id="btnActivar">
+        <button type="button" id="btnActivar" class="boton-secundario">
             Activar mi cuenta
         </button>
 
-        <button type="button" id="btnRecuperar">
-            ¿Olvidaste tu contraseña?
-        </button>
+        <a href="#" id="btnRecuperar" class="link">¿Olvidaste tu contraseña?</a>    
+        
 
     </form>
 
@@ -96,7 +96,7 @@
                 Activar cuenta
             </button>
                     
-            <button type="button" id="volverActivar">
+            <button type="button" class="btnVolver">
                 Volver
             </button>
         </form>
@@ -106,18 +106,38 @@
 
         <h2>Recuperar contraseña</h2>
 
+        <label for="correoRecuperacion">
+            Correo electrónico
+        </label>
+        
+        <form id="formularioRecuperacion">
+            <input 
+                type="email"
+                id="correoRecuperacion"
+                name="correoRecuperacion"
+                required
+            >
+            <p id="mensajeRecuperacion" role="status"></p>
+            
+            <button type="submit">
+                Solicitar recuperacion
+            </button>
+        </form>
+
+        
+        
         <p>
             Tu solicitud debe ser aprobada
             por un administrador.
         </p>
 
-        <button type="button" id="volverRecuperar">
+        <button type="button" class="btnVolver">
             Volver
         </button>
 
     </section>
-
+    
     <script src="script.js"></script>
-
+    </main>
 </body>
 </html>

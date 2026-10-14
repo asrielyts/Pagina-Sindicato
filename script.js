@@ -8,8 +8,7 @@ const seccionRecuperar = document.getElementById("seccionRecuperar");
 //botones
 const botonActivar = document.getElementById("btnActivar");
 const botonRecuperar = document.getElementById("btnRecuperar");
-const botonVolverActivar = document.getElementById("volverActivar");
-const botonVolverRecuperar = document.getElementById("volverRecuperar");
+const botonesVolver = document.querySelectorAll(".btnVolver")
 
 //datos
 const campoCorreo = document.getElementById("correoActivacion");
@@ -56,15 +55,15 @@ formularioActivacion.addEventListener("submit", function(evento) {
     if (contrasena.length < 8) {
         mostrarMensaje(
             mensajeActivacion, 
-            "La contraseña debe tener almenos 8 digitos", 
+            "La contraseña debe tener al menos 8 digitos", 
             "error")
         return;
     }
 
     mostrarMensaje(
         mensajeActivacion, 
-        "Datos validados. Espere validacion de servidor",
-        "validación"
+        "Formulario válido. Pendiente de verificar el código",
+        "info"
     )
 });
 
@@ -80,13 +79,9 @@ botonRecuperar.addEventListener("click", function() {
     mostrarSeccion(seccionRecuperar);
 });
 
-// Volver desde activación
-botonVolverActivar.addEventListener("click", function() {
-    mostrarSeccion(seccionLogin);
+// Volver a inicio de sesion
+botonesVolver.forEach(function(boton) {
+    boton.addEventListener("click", function() {
+        mostrarSeccion(seccionLogin);
+    });
 });
-
-// Volver desde recuperación
-botonVolverRecuperar.addEventListener("click", function() {
-    mostrarSeccion(seccionLogin);
-});
-
